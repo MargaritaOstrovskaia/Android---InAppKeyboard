@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keyboard Test"
+        android:background="#c9c9f1"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"/>
+
+    <EditText
+        android:id="@+id/editTextSystem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C9F1EC"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:hint="system keyboard"
+        android:layout_below="@id/textView"/>
+
+    <EditText
+        android:id="@+id/editTextTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EAF1C9"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:hint="no keyboard"
+        android:layout_below="@id/editTextSystem"/>
+
+    <EditText
+        android:id="@+id/editTextSoft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBC9F1"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:hint="in-app keyboard"
+        android:layout_below="@id/editTextTemp"/>
+
+    <com.ostrov.inappkeyboard.MyKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

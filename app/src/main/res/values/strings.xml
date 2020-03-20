@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">InAppKeyboard</string>
+    <string name="delete">Delete</string>
+    <string name="enter">Enter</string>
+    <string name="clear">Clear</string>
+</resources>
