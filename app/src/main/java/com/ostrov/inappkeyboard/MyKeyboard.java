@@ -116,11 +116,15 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
         } else if (v.getId() == R.id.button_clear)
             clear();
         else {
+            // add new characters in text
             String value = keyValues.get(v.getId());
             inputConnection.commitText(value, 1);
         }
+        // close keyboard
+        //this.setVisibility(INVISIBLE);
     }
 
+    // Delete all characters
     private void clear() {
         CharSequence currentText = inputConnection.getExtractedText(new ExtractedTextRequest(), 0).text;
         CharSequence beforeCursorText = inputConnection.getTextBeforeCursor(currentText.length(), 0);

@@ -6,11 +6,15 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     boolean isShowKeyboard = true;
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         editTextSoft.setRawInputType(InputType.TYPE_CLASS_TEXT);
         editTextSoft.setTextIsSelectable(true);
 
-        MyKeyboard keyboard = (MyKeyboard) findViewById(R.id.keyboard);
+        keyboard = (MyKeyboard) findViewById(R.id.keyboard);
         // pass the InputConnection from the EditText to the keyboard
         InputConnection ic = editTextSoft.onCreateInputConnection(new EditorInfo());
         keyboard.setInputConnection(ic);
@@ -39,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
                     keyboard.setVisibility(View.VISIBLE);
                 else
                     keyboard.setVisibility(View.INVISIBLE);
+            }
+        });
+        editTextSoft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                keyboard.setVisibility(View.VISIBLE);
             }
         });
 
@@ -56,6 +66,15 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextTemp = (EditText) findViewById(R.id.editTextTemp);
         editTextTemp.setRawInputType(InputType.TYPE_CLASS_TEXT);
         editTextTemp.setTextIsSelectable(true);
+
+        RelativeLayout layout = findViewById(R.id.layout_main);
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideSystemKeyboard(v);
+                keyboard.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
     public void showSystemKeyboard(View view){
