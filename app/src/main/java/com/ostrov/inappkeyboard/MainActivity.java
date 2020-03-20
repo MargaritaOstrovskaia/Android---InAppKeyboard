@@ -17,7 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    boolean isShowKeyboard = true;
+    MyKeyboard keyboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
