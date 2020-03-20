@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         editTextSoft.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                MyKeyboard keyboard = (MyKeyboard) findViewById(R.id.keyboard);
                 if(hasFocus)
                     keyboard.setVisibility(View.VISIBLE);
                 else
