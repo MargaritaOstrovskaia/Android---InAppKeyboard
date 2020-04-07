@@ -1,5 +1,5 @@
 # In-App Keyboard
 
-<img src="https://github.com/MargaritaOstrovskaia/InAppKeyboard/blob/master/app/src/main/res/drawable/ScreenShot.png" height="50%" width="50%">
+<img src="https://github.com/MargaritaOstrovskaia/Android---InAppKeyboard/blob/master/screenshots/screen.png" height="30%" width="30%">
  
-[Documentation look here.](https://github.com/MargaritaOstrovskaia/InAppKeyboard/wiki/In-App-Keyboard)
+[Documentation look here.](https://github.com/MargaritaOstrovskaia/Android---InAppKeyboard/wiki/In-App-Keyboard)
